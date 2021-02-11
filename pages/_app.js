@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import React from 'react'
+import {ThemeProvider} from 'theme-ui'
+import theme from '../theme'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function Gr8hubApp({ Component, pageProps }) {
+  return (
+    <ThemeProvider theme={theme}>
+       <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
-export default MyApp
+
